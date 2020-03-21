@@ -83,3 +83,5 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D PYTHON3_PACKAGES_PATH=/usr/lib/python3/dist-packages \
 -D PYTHON3_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.5m.so \
 ../
+
+make -j4
