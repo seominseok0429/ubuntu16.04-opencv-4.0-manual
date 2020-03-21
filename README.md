@@ -5,36 +5,53 @@ apt install pkg-config
 pkg-config --modversion opencv
 
 apt-get purge  libopencv* python-opencv
+
 apt-get autoremove
 
 apt-get update
+
 apt-get upgrade
 
 apt-get install build-essential cmake
+
 apt-get install pkg-config
+
 apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
+
 apt-get install libavcodec-dev libavformat-dev libswscale-dev libxvidcore-dev libx264-dev libxine2-dev
+
 apt-get install libv4l-dev v4l-utils
+
 apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+
 apt-get install libqt4-dev
+
 apt-get install mesa-utils libgl1-mesa-dri libqt4-opengl-dev
+
 apt-get install libatlas-base-dev gfortran libeigen3-dev
+
 apt-get install python2.7-dev python3-dev python-numpy python3-numpy
 
 apt-get install wget
+
 apt-get install unzip
 
 mkdir opencv
+
 cd opencv
 
 wget -O opencv.zip https://github.com/opencv/opencv/archive/4.0.0.zip
+
 wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.0.0.zip
 
 unzip opencv.zip
+
 unzip opencv_contrib.zip
 
 cd opencv-4.0.0/
+
 mkdir build
+
 cd build
 
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
@@ -52,7 +69,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D WITH_QT=ON \
 -D WITH_GTK=OFF \
 -D WITH_OPENGL=ON \
--D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.0.1/modules \
+-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.0.0/modules \
 -D WITH_V4L=ON  \
 -D WITH_FFMPEG=ON \
 -D WITH_XINE=ON \
